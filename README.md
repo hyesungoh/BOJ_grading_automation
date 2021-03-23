@@ -4,11 +4,11 @@
 
 ### Development tool
 
-> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/> BeautifulSoup4
+> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/>
 
 ### Result
 
-#### [Youtube Link]((https://youtu.be/jMBtbVg0Abw))
+#### [Youtube Link](https://youtu.be/jMBtbVg0Abw)
 
 Selenium을 이용하여 동적 크롤링
 
