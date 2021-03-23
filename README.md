@@ -2,13 +2,13 @@
 
 백준 채점 자동화 프로그램
 
-#### Development tool
+### Development tool
 
 > <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/> BeautifulSoup4
 
-#### Result
+### Result
 
-##### [Youtube Link](<(https://youtu.be/jMBtbVg0Abw)>)
+#### [Youtube Link]((https://youtu.be/jMBtbVg0Abw))
 
 Selenium을 이용하여 동적 크롤링
 
@@ -18,7 +18,7 @@ Selenium을 이용하여 동적 크롤링
 
 ![스크린샷 2021-03-24 오전 1 08 18](https://user-images.githubusercontent.com/26461307/112181432-ca4ffc80-8c3f-11eb-845d-4d7cc88318f2.png)
 
-#### Develop Log
+### Develop Log
 
 -   `이름(학번), 백준 ID`로 이루어진 CSV 파일을 읽어 딕셔너리화하여 반환
 
@@ -91,12 +91,12 @@ def write_csv():
 
 ```
 
-#### Issue
+### Issue
 
 -   Selenium chrome driver version
     -   로컬 [chrome 버전에 맞는 driver](https://chromedriver.chromium.org/downloads)을 업데이트하여 수정
 
-#### Extend
+### Extend
 
 -   LMS상 채점을 자동화
     -   LMS 제출 결과에 "면접"이 있을 시 만점 처리
