@@ -32,14 +32,22 @@ def grading(student_id, problems):
     for answer in correct_div.findAll("a"):
         students_answers.append(answer.get_text())
 
-    is_passed = 'O'
+
     is_solve_by_problems = []
 
     for problem in problems:
         if problem not in students_answers:
-            is_passed = 'X'
             is_solve_by_problems.append('X')
         else: is_solve_by_problems.append('O')
+
+    is_passed = "O"  # 두 개 이상 틀렸을 때 틀린 것으로
+    not_passed_cnt = 0
+    for is_solve in is_solve_by_problems:
+        if is_solve == 'X':
+            not_passed_cnt += 1
+
+        if not_passed_cnt >= 2:
+            is_passed = "X"
 
     return [is_passed, is_solve_by_problems]
 
