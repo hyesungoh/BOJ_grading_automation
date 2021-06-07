@@ -6,6 +6,15 @@
 
 > <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/>
 
+### How to update chromedriver on mac
+
+1. install chromedriver
+1. move to `usr/local/bin`
+
+```bash
+mv chromedriver /usr/local/bin
+```
+
 ### Result
 
 #### [Youtube Link](https://youtu.be/jMBtbVg0Abw)
