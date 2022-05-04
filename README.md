@@ -1,21 +1,26 @@
-## BOJ grading automation
+# BOJ grading automation
 
 백준 채점 자동화 프로그램
 
-### Development tool
+## 기술 스택
 
-> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=Selenium&logoColor=white"/>
 
-### How to update chromedriver on mac
+## 시작하는 방법
 
-1. install chromedriver
-1. move to `usr/local/bin`
+1. chromedriver와 의존성 설치
+   > 로컬 크롬과 동일한 버전의 chromedriver
+2. 이름과 백준 ID로 이루어진 CSV 파일을 root dir에 위치
 
-```bash
-mv chromedriver /usr/local/bin
+```text
+// 예시
+오혜성, hs980414
 ```
 
-### Result
+3. 채점할 두 문제를 공백으로 나누어 입력
+4. 현 날짜를 기준으로 저장되는 csv 파일을 이용해 채점
+
+### 결과물
 
 #### [Youtube Link](https://youtu.be/jMBtbVg0Abw)
 
@@ -27,9 +32,11 @@ Selenium을 이용하여 동적 크롤링
 
 ![스크린샷 2021-03-24 오전 1 08 18](https://user-images.githubusercontent.com/26461307/112181432-ca4ffc80-8c3f-11eb-845d-4d7cc88318f2.png)
 
-### Develop Log
+<details>
 
--   `이름(학번), 백준 ID`로 이루어진 CSV 파일을 읽어 딕셔너리화하여 반환
+<sumamry> <h2>Develop log</h2> </summary>
+
+- `이름(학번), 백준 ID`로 이루어진 CSV 파일을 읽어 딕셔너리화하여 반환
 
 ```python
 def return_student_information():
@@ -46,7 +53,7 @@ def return_student_information():
     return student_information
 ```
 
--   백준 ID를 이용해 백준 프로필로 이동 후 주차별 통과 여부, 각 문제별 풀었는 지 확인하여 반환
+- 백준 ID를 이용해 백준 프로필로 이동 후 주차별 통과 여부, 각 문제별 풀었는 지 확인하여 반환
 
 ```python
 def grading(student_id, problems):
@@ -70,7 +77,7 @@ def grading(student_id, problems):
     return [is_passed, is_solve_by_problems]
 ```
 
--   성명, 백준 ID, 제출 결과, 각 문제별 결과를 CSV 파일로 저장
+- 성명, 백준 ID, 제출 결과, 각 문제별 결과를 CSV 파일로 저장
 
 ```python
 def write_csv():
@@ -100,13 +107,15 @@ def write_csv():
 
 ```
 
-### Issue
+</details>
 
--   Selenium chrome driver version
-    -   로컬 [chrome 버전에 맞는 driver](https://chromedriver.chromium.org/downloads)을 업데이트하여 수정
+## 트러블 슈팅
 
-### Extend
+### 맥에서 chromedriver 업데이트하는 방법
 
--   LMS상 채점을 자동화
-    -   LMS 제출 결과에 "면접"이 있을 시 만점 처리
-    -   채점 로그 작성
+1. install chromedriver
+1. move to `usr/local/bin`
+
+```bash
+mv chromedriver /usr/local/bin
+```
