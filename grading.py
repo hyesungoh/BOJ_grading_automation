@@ -27,7 +27,7 @@ def grading(student_id, problems):
     driver.get(BOJ_URL + student_id)
     page_source = BeautifulSoup(driver.page_source, "html.parser")
 
-    correct_div = page_source.find("div", {"class": "panel-body"})
+    correct_div = page_source.findAll("div", {"class": "panel-body"})[1]
     students_answers = []
     for answer in correct_div.findAll("a"):
         students_answers.append(answer.get_text())
